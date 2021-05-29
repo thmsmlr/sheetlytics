@@ -17,7 +17,7 @@
 <p>The mission is simple:</p>
 <ul>
   <li>Free hosting</li>
-  <li>Basic analytics</li>
+  <li>Basic, light-weight analytics</li>
   <li>No tracking cookies, GDPR compliant</li>
 </ul>
 

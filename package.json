@@ -9,10 +9,17 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
+    "@sveltejs/adapter-vercel": "^1.0.0-next.0",
     "@sveltejs/kit": "next",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
     "svelte": "^3.34.0"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "singleQuote": true
   },
   "type": "module"
 }

@@ -10,27 +10,27 @@
   <div class="mt-4 text-gray-900">
     <img class="w-[12rem] md:-ml-16 md:w-[22rem] md:h-[173px]" src="/logo.svg" alt="" />
 
-    <h1 class="mt-2 text-2xl md:text-3xl font-normal leading-1 md:leading-9">
-      Are you <strong class="font-extrabold">cheap?</strong><br />
+    <h1 class="mt-2 text-4xl md:text-4xl font-normal leading-tight md:leading-10">
+      Are you <strong class="font-extrabold">cheap</strong>?<br />
       Complain about <strong class="font-extrabold">privacy</strong> on Twitter? <br />
-      Hate Google, but love that Google Analytics is <strong class="font-extrabold">free?</strong>
+      Hate Google, but love that <strong class="font-extrabold">free</strong> compute?
     </h1>
-    <h3 class="mt-2 text-lg md:text-xl font-medium text-gray-700">
-      Same. So we're doing something about it.
+    <h3 class="mt-2 text-xl font-medium text-gray-700">
+      Same same. So we're doing something about it.
     </h3>
 
-    <div class="mt-4 prose">
+    <div class="mt-6 prose">
       <p><strong>Google Analytics</strong> has been powering the web for years.</p>
       <p>
         It's a great service, but developers have woken up. We don't want to contribute to Google
-        tracking their users across the web. We don't want to deal with GDPR compliance. We just
-        want to know how much traffic we're getting.
+        tracking our users across the web. We don't want to deal with GDPR compliance. We just want
+        to know how much traffic we're getting.
       </p>
 
       <p>The mission is simple:</p>
       <ul>
         <li>Free hosting</li>
-        <li>Basic, light-weight analytics</li>
+        <li>Basic, lightweight analytics</li>
         <li>No tracking cookies, GDPR compliant</li>
       </ul>
     </div>
@@ -67,7 +67,7 @@
     </form>
   </div>
 </div>
-<p class="mt-12 text-gray-800 text-center">
+<p class="py-12 text-gray-800 text-center">
   Created by:
   <a class="text-yellow-600 hover:text-yellow-700 font-semibold" href="https://twitter.com/thmsmlr"
     >@thmsmlr</a

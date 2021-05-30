@@ -10,7 +10,7 @@
   <div class="mt-4 text-gray-900">
     <img class="w-[12rem] md:-ml-16 md:w-[22rem] md:h-[173px]" src="/logo.svg" alt="" />
 
-    <h1 class="mt-2 text-4xl md:text-4xl font-normal leading-tight md:leading-10">
+    <h1 class="mt-2 md:mt-4 text-4xl md:text-4xl font-normal leading-tight md:leading-10">
       Are you <strong class="font-extrabold">cheap</strong>?<br />
       Complain about <strong class="font-extrabold">privacy</strong> on Twitter? <br />
       Hate Google, but love that <strong class="font-extrabold">free</strong> compute?

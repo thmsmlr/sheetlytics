@@ -1,5 +1,7 @@
 <script>
-  let x = 1;
+  import { createTurboForm } from '$lib/turboform';
+
+  let turboform = createTurboForm();
 </script>
 
 <svelte:head>
@@ -45,26 +47,32 @@
     <p class="inline text-3xl font-extrabold tracking-tight text-yellow-600 sm:block sm:text-4xl">
       Sign up to get notified when we launch.
     </p>
-    <form class="mt-8 sm:flex justify-center" action="/api/get-notified">
-      <label for="emailAddress" class="sr-only">Email address</label>
-      <input
-        id="emailAddress"
-        name="email"
-        type="email"
-        autocomplete="email"
-        required
-        class="w-full px-5 py-3 placeholder-gray-500 focus:ring-yellow-500 focus:border-yellow-500 sm:max-w-xs border-gray-300 rounded-md"
-        placeholder="Enter your email"
-      />
-      <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-        <button
-          type="submit"
-          class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
-        >
-          Notify me
-        </button>
-      </div>
-    </form>
+    {#if $turboform?.submitted}
+      <p class="mt-8 inline text-lg font-medium tracking-tight text-gray-900 sm:block">
+        Thanks! we'll send you an email when we launch
+      </p>
+    {:else}
+      <form use:turboform class="mt-8 sm:flex justify-center" action="/api/get-notified">
+        <label for="emailAddress" class="sr-only">Email address</label>
+        <input
+          id="emailAddress"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+          class="w-full px-5 py-3 placeholder-gray-500 focus:ring-yellow-500 focus:border-yellow-500 sm:max-w-xs border-gray-300 rounded-md"
+          placeholder="Enter your email"
+        />
+        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+          <button
+            type="submit"
+            class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+          >
+            Notify me
+          </button>
+        </div>
+      </form>
+    {/if}
   </div>
 </div>
 <p class="py-12 text-gray-800 text-center">

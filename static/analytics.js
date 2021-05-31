@@ -10,11 +10,11 @@
     console.warn('Ignoring Event: ' + t);
   }
   function e(t, e) {
-    // if (
-    //   /^localhost$|^127(?:\.[0-9]+){0,2}\.[0-9]+$|^(?:0*\:)*?:?0*1$/.test(a.hostname) ||
-    //   'file:' === a.protocol
-    // )
-    //   return w('localhost');
+    if (
+      /^localhost$|^127(?:\.[0-9]+){0,2}\.[0-9]+$|^(?:0*\:)*?:?0*1$/.test(a.hostname) ||
+      'file:' === a.protocol
+    )
+      return w('localhost');
     if (
       !(
         window.phantom ||

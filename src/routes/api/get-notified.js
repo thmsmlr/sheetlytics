@@ -26,9 +26,7 @@ export async function get(req) {
   }
 
   return {
-    status: 302,
-    headers: {
-      Location: '/thank-you',
-    },
+    status: 200,
+    body: { success: true },
   };
 }

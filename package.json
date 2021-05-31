@@ -28,5 +28,8 @@
     "jsxBracketSameLine": true,
     "singleQuote": true
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "rxjs": "^7.1.0"
+  }
 }

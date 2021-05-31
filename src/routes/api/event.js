@@ -23,6 +23,15 @@
 export async function post(req) {
   let data = JSON.parse(req.body);
   let url = new URL(data.u);
+  let referrer = data.r;
+  try {
+    referrer = new URL(data.r);
+    referrer = referrer.hostname;
+    if (referrer.startsWith('www.')) referrer = referrer.substring(4);
+  } catch (err) {
+    console.log(err);
+  }
+
   console.log(req);
   console.log(data);
 
@@ -32,11 +41,11 @@ export async function post(req) {
     name: data.n,
     hostname: url.hostname,
     pathname: url.pathname,
-    referrer_source: '',
-    referrer: '',
-    utm_medium: '',
-    utm_source: '',
-    utm_campaign: '',
+    // referrer_source: ,
+    referrer: referrer,
+    // utm_medium: '',
+    // utm_source: '',
+    // utm_campaign: '',
     country_code: '',
     operating_system: '',
     operating_system_version: '',

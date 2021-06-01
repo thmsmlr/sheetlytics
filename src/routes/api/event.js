@@ -1,10 +1,8 @@
 import fs from 'fs';
 import { Reader } from '@maxmind/geoip2-node';
-// import DB from '$lib/GeoLite2-Country.mmdb?raw';
-// console.log(DB);
-const IP = Reader.openBuffer(fs.readFileSync('./static/GeoLite2-Country.mmdb'));
-// const IP = Reader.openBuffer(DB);
-// const IP = '';
+import DB from '../../../static/GeoLite2-Country.mmdb.base64?raw';
+
+const IP = Reader.openBuffer(Buffer.from(DB, 'base64'));
 
 /*
       event_attrs = %{

@@ -1,6 +1,3 @@
-import fs from 'fs';
-import { Reader } from '@maxmind/geoip2-node';
-
 /*
       event_attrs = %{
         timestamp: NaiveDateTime.utc_now() |> NaiveDateTime.truncate(:second),
@@ -23,19 +20,6 @@ import { Reader } from '@maxmind/geoip2-node';
       }
   */
 
-const IP = Reader.openBuffer(fs.readFileSync('GeoLite2-Country.mmdb'));
-export async function get(req) {
-  console.log(req);
-  let ip = req.headers['x-forwarded-for'];
-  return {
-    body: `
-    ${ip}
-    ${IP.country(ip).country.isoCode}
-    ${JSON.stringify(req.headers, null, 4)}
-    `,
-  };
-}
-
 export async function post(req) {
   let data = JSON.parse(req.body);
   let url = new URL(data.u);
@@ -48,12 +32,8 @@ export async function post(req) {
     console.log(err);
   }
 
-  let country_code = req.headers['x-forwarded-for'];
-  if (country_code) country_code = IP.country(country_code).country.isoCode;
-
   console.log(req);
   console.log(data);
-  console.log(country_code);
 
   // TODO: Fill out the rest of these fields, get them
   // into the form.
@@ -66,7 +46,7 @@ export async function post(req) {
     // utm_medium: '',
     // utm_source: '',
     // utm_campaign: '',
-    country_code: country_code,
+    country_code: '',
     operating_system: '',
     operating_system_version: '',
     browser: '',

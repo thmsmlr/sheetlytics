@@ -47,6 +47,12 @@ export async function post(req) {
   let referrer_source = null;
   let ua = parseUserAgent(req.headers['user-agent']);
 
+  let screen_size = null;
+  if (data.w < 576) screen_size = 'Mobile';
+  if (data.w < 992) screen_size = 'Tablet';
+  if (data.w < 1440) screen_size = 'Laptop';
+  if (data.w >= 1440) screen_size = 'Desktop';
+
   try {
     referrer = new URL(data.r);
     referrer_source = referrer.hostname;
@@ -74,7 +80,7 @@ export async function post(req) {
     operating_system_version: ua?.os?.version,
     browser: ua?.browser?.name,
     browser_version: ua?.browser?.version,
-    screen_size: '',
+    screen_size,
   };
   console.log(event);
 

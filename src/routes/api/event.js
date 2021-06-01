@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { Reader } from '@maxmind/geoip2-node';
+const IP = Reader.openBuffer(fs.readFileSync('src/lib/GeoLite2-Country.mmdb'));
 
 /*
       event_attrs = %{
@@ -23,10 +24,9 @@ import { Reader } from '@maxmind/geoip2-node';
       }
   */
 
-const IP = Reader.openBuffer(fs.readFileSync('GeoLite2-Country.mmdb'));
 export async function get(req) {
   console.log(req);
-  let ip = req.headers['x-forwarded-for'];
+  let ip = req.headers['x-forwarded-for'] || '1.1.1.1';
   return {
     body: `
     ${ip}

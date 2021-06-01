@@ -36,6 +36,27 @@
         <li>No tracking cookies, GDPR compliant</li>
       </ul>
     </div>
+
+    <div class="mt-16 sm:flex justify-center items-center sm:space-x-6">
+      <a
+        href="https://github.com/thmsmlr/sheetlytics"
+        target="_blank"
+        class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+      >
+        Get Started
+      </a>
+      <a
+        href="https://docs.google.com/spreadsheets/d/12OWV-NYli94RVCwAVTtl_e_3igXn7J92CY7ZLJBsmSE/edit#gid=916855859"
+        target="_blank"
+        class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-yellow-700 shadow hover:text-yellow-600 transition"
+      >
+        Live Demo
+      </a>
+    </div>
+    <div class="text-center">
+      <img src="/demo-screenshot.png" alt="" />
+      <p class="text-gray-500">(Sneak preview of what we're working on)</p>
+    </div>
   </div>
 </div>
 

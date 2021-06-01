@@ -30,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@maxmind/geoip2-node": "^2.3.2",
     "rxjs": "^7.1.0"
   }
 }
